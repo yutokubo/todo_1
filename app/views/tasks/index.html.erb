@@ -1,0 +1,10 @@
+<h1>CREATE TASK</h1>
+<%=form_with model: @task, local: true do |f| %>
+  <p><%= f.text_field :text%></p>
+  <p><%= f.submit "CREATE"%></p>
+<%end%>
+
+<h2>TASKS</h2>
+<% @tasks.each do |task| %>
+  <p><%=task.text%></p>
+<%end%>
